@@ -43,8 +43,17 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById('logo-img');
+const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-let roundLogo = document.getElementById('cta-img');
+// created roundLogo selected cta-img through DOM and set attribute to img-src value of img/header.png
+const roundLogo = document.getElementById('cta-img');
 roundLogo.setAttribute('src', siteContent['cta']['img-src']);
+
+//created value of anchor and assigned to siteContent.nav value, selected all a href links and assigned to value of anchor, used forEach to execute function that moved through array
+//nav and printed nav-item-1 through 6 created text content to generate anchor link values needed for href links
+const anchor = siteContent['nav'];
+const navBar = document.querySelectorAll('a');
+navBar.forEach(function(item, i) {
+	item.textContent = anchor[`nav-item-${i + 1}`];
+});
