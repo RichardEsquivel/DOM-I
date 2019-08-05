@@ -42,6 +42,8 @@ const siteContent = {
 	}
 };
 
+// ****Nav Bar***
+
 // Example: Update the img src for the logo
 const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
@@ -57,3 +59,45 @@ const navBar = document.querySelectorAll('a');
 navBar.forEach(function(item, i) {
 	item.textContent = anchor[`nav-item-${i + 1}`];
 });
+
+//*** Header ***
+
+const ctaText = document.querySelector('h1');
+ctaText.innerHTML = 'DOM <br> Is <br> Awesome';
+
+const coolBtn = document.querySelector('button');
+coolBtn.textContent = 'Get Started';
+
+coolBtn.style.color = 'blue';
+
+const topContentHeading = document.querySelectorAll('.top-content h4');
+
+console.log(topContentHeading);
+
+topContentHeading[0].textContent = siteContent['main-content']['features-h4'];
+topContentHeading[1].textContent = siteContent['main-content']['about-h4'];
+
+const topContentText = document.querySelectorAll('.top-content p');
+console.log(topContentText);
+
+topContentText[0].textContent = siteContent['main-content']['features-content'];
+topContentText[1].textContent = siteContent['main-content']['about-content'];
+
+// 'main-content': {
+//   'features-h4': 'Features',
+//   'features-content':
+//     'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
+//   'about-h4': 'About',
+//   'about-content':
+//     'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
+//   'middle-img-src': 'img/mid-page-accent.jpg',
+//   'services-h4': 'Services',
+//   'services-content':
+//     'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
+//   'product-h4': 'Product',
+//   'product-content':
+//     'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
+//   'vision-h4': 'Vision',
+//   'vision-content':
+//     'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+// },
