@@ -83,6 +83,9 @@ console.log(topContentText);
 topContentText[0].textContent = siteContent['main-content']['features-content'];
 topContentText[1].textContent = siteContent['main-content']['about-content'];
 
+const topContentImg = document.getElementById('middle-img');
+topContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
 // 'main-content': {
 //   'features-h4': 'Features',
 //   'features-content':
