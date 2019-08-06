@@ -70,6 +70,7 @@ coolBtn.textContent = 'Get Started';
 
 coolBtn.style.color = 'blue';
 
+// Content of Body Top Secion
 const topContentHeading = document.querySelectorAll('.top-content h4');
 
 console.log(topContentHeading);
@@ -83,6 +84,7 @@ console.log(topContentText);
 topContentText[0].textContent = siteContent['main-content']['features-content'];
 topContentText[1].textContent = siteContent['main-content']['about-content'];
 
+//Middle
 const topContentImg = document.getElementById('middle-img');
 topContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
@@ -100,21 +102,18 @@ bottomParagraphText[0].textContent = siteContent['main-content']['services-conte
 bottomParagraphText[1].textContent = siteContent['main-content']['product-content'];
 bottomParagraphText[2].textContent = siteContent['main-content']['vision-content'];
 
-// 'main-content': {
-//   'features-h4': 'Features',
-//   'features-content':
-//     'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
-//   'about-h4': 'About',
-//   'about-content':
-//     'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
-//   'middle-img-src': 'img/mid-page-accent.jpg',
-//   'services-h4': 'Services',
-//   'services-content':
-//     'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
-//   'product-h4': 'Product',
-//   'product-content':
-//     'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
-//   'vision-h4': 'Vision',
-//   'vision-content':
-//     'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+const contactInfoHeader = document.querySelectorAll('.contact h4');
+
+contactInfoHeader[0].textContent = siteContent['contact']['contact-h4'];
+
+const contactInfo = document.querySelectorAll('.contact p');
+
+// contact: {
+//   'contact-h4': 'Contact',
+//   address: '123 Way 456 Street Somewhere, USA',
+//   phone: '1 (888) 888-8888',
+//   email: 'sales@greatidea.io'
 // },
+// footer: {
+//   copyright: 'Copyright Great Idea! 2018'
+// }
