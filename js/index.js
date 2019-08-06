@@ -86,6 +86,20 @@ topContentText[1].textContent = siteContent['main-content']['about-content'];
 const topContentImg = document.getElementById('middle-img');
 topContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+const bottomContentHeading = document.querySelectorAll('.bottom-content h4');
+console.log(bottomContentHeading);
+
+bottomContentHeading[0].textContent = siteContent['main-content']['services-h4'];
+bottomContentHeading[1].textContent = siteContent['main-content']['product-h4'];
+bottomContentHeading[2].textContent = siteContent['main-content']['vision-h4'];
+
+const bottomParagraphText = document.querySelectorAll('.bottom-content p');
+console.log(bottomParagraphText);
+
+bottomParagraphText[0].textContent = siteContent['main-content']['services-content'];
+bottomParagraphText[1].textContent = siteContent['main-content']['product-content'];
+bottomParagraphText[2].textContent = siteContent['main-content']['vision-content'];
+
 // 'main-content': {
 //   'features-h4': 'Features',
 //   'features-content':
