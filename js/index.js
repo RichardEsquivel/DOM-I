@@ -130,7 +130,11 @@ contactInfoHeader[0].textContent = siteContent['contact']['contact-h4'];
 
 //Contact Information
 const contactInfo = document.querySelectorAll('.contact p');
-contactInfo[0].textContent = siteContent['contact']['address'];
+
+let addressContactArray = siteContent['contact']['address'].split(' ');
+addressContactArray.splice(4, 0, '\r\n');
+contactInfo[0].innerText = addressContactArray.join(' ');
+
 contactInfo[1].textContent = siteContent['contact']['phone'];
 contactInfo[2].textContent = siteContent['contact']['email'];
 //Footer Content
