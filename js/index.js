@@ -60,6 +60,10 @@ navBar.forEach(function(item, i) {
 	item.textContent = anchor[`nav-item-${i + 1}`];
 });
 
+navBar.forEach(function(item, i) {
+	item.style.color = 'green';
+});
+
 //*** Header ***
 
 const ctaText = document.querySelector('h1');
@@ -107,6 +111,13 @@ const contactInfoHeader = document.querySelectorAll('.contact h4');
 contactInfoHeader[0].textContent = siteContent['contact']['contact-h4'];
 
 const contactInfo = document.querySelectorAll('.contact p');
+
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
+
+const footerText = document.querySelector('footer p');
+footerText.textContent = siteContent['footer']['copyright'];
 
 // contact: {
 //   'contact-h4': 'Contact',
