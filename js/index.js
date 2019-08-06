@@ -58,12 +58,27 @@ const anchor = siteContent['nav'];
 const navBar = document.querySelectorAll('a');
 navBar.forEach(function(item, i) {
 	item.textContent = anchor[`nav-item-${i + 1}`];
-});
-
-navBar.forEach(function(item, i) {
 	item.style.color = 'green';
 });
 
+//Assignment of value to append and prepend navigation bar
+const navigationModify = document.querySelector('nav');
+
+//First Prepended Nav Link
+const teamPageLink = document.createElement('a');
+teamPageLink.textContent = 'Team Info';
+teamPageLink.setAttribute('href', '#');
+teamPageLink.style.color = 'green';
+
+//Second appended Nav Link
+const gitHubLink = document.createElement('a');
+gitHubLink.textContent = 'Our Code!';
+gitHubLink.setAttribute('href', '#');
+gitHubLink.style.color = 'green';
+
+//Prepend and append navBar using navigationModify
+navigationModify.prepend(teamPageLink);
+navigationModify.append(gitHubLink);
 //*** Header ***
 
 const ctaText = document.querySelector('h1');
@@ -74,7 +89,7 @@ coolBtn.textContent = 'Get Started';
 
 coolBtn.style.color = 'blue';
 
-// Content of Body Top Secion
+// Top Body Section Headings
 const topContentHeading = document.querySelectorAll('.top-content h4');
 
 console.log(topContentHeading);
@@ -82,16 +97,18 @@ console.log(topContentHeading);
 topContentHeading[0].textContent = siteContent['main-content']['features-h4'];
 topContentHeading[1].textContent = siteContent['main-content']['about-h4'];
 
+// Top Body Section Paragraphs
 const topContentText = document.querySelectorAll('.top-content p');
 console.log(topContentText);
 
 topContentText[0].textContent = siteContent['main-content']['features-content'];
 topContentText[1].textContent = siteContent['main-content']['about-content'];
 
-//Middle
+//Middle image stretching across center of page content
 const topContentImg = document.getElementById('middle-img');
 topContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+// Lower Body Section Headings
 const bottomContentHeading = document.querySelectorAll('.bottom-content h4');
 console.log(bottomContentHeading);
 
@@ -99,6 +116,7 @@ bottomContentHeading[0].textContent = siteContent['main-content']['services-h4']
 bottomContentHeading[1].textContent = siteContent['main-content']['product-h4'];
 bottomContentHeading[2].textContent = siteContent['main-content']['vision-h4'];
 
+// Lower Body Section Paragraphs
 const bottomParagraphText = document.querySelectorAll('.bottom-content p');
 console.log(bottomParagraphText);
 
@@ -106,25 +124,15 @@ bottomParagraphText[0].textContent = siteContent['main-content']['services-conte
 bottomParagraphText[1].textContent = siteContent['main-content']['product-content'];
 bottomParagraphText[2].textContent = siteContent['main-content']['vision-content'];
 
+//Contact Info Heading
 const contactInfoHeader = document.querySelectorAll('.contact h4');
-
 contactInfoHeader[0].textContent = siteContent['contact']['contact-h4'];
 
+//Contact Information
 const contactInfo = document.querySelectorAll('.contact p');
-
 contactInfo[0].textContent = siteContent['contact']['address'];
 contactInfo[1].textContent = siteContent['contact']['phone'];
 contactInfo[2].textContent = siteContent['contact']['email'];
-
+//Footer Content
 const footerText = document.querySelector('footer p');
 footerText.textContent = siteContent['footer']['copyright'];
-
-// contact: {
-//   'contact-h4': 'Contact',
-//   address: '123 Way 456 Street Somewhere, USA',
-//   phone: '1 (888) 888-8888',
-//   email: 'sales@greatidea.io'
-// },
-// footer: {
-//   copyright: 'Copyright Great Idea! 2018'
-// }
